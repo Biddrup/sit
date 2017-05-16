@@ -5,3 +5,4 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+	<h1><a href="<?php echo site_url(); ?>"><?php  ?><?php bloginfo('name') ?></a></h1>
