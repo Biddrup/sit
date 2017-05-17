@@ -6,3 +6,6 @@
 </head>
 <body>
 	<h1><a href="<?php echo site_url(); ?>"><?php  ?><?php bloginfo('name') ?></a></h1>
+	<?php wp_nav_menu(array(
+		'theme_location' => 'header_menu',
+	)); ?>
