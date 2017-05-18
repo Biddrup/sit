@@ -21,3 +21,15 @@
 		wp_enqueue_script('custom-js', get_template_directory_uri().'/js/custom.js', array('jquery'), 'v2.01', true);
 	}
 	add_action('wp_enqueue_scripts','sit_scripts');
+
+	function sit_widgets(){
+		register_sidebar(array(
+			'name' => 'Widget One',
+			'id' => 'widget_one',
+		));
+		register_sidebar(array(
+			'name' => 'Widget Two',
+			'id' => 'widget_two',
+		));
+	}
+	add_action('widgets_init', 'sit_widgets');
