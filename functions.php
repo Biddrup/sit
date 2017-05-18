@@ -4,6 +4,7 @@
 		add_theme_support('post-thumbnails');
 		add_image_size('excerpt-image-size', 700, 400, true);
 		add_image_size('content-image-size', 600, 400, true);
+		add_image_size('search-image-size', 100, 100, true);
 		register_nav_menus(array(
 			'header_menu' => 'Header Menu',
 			'footer_menu' => 'Footer Menu',
