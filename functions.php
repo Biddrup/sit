@@ -9,6 +9,7 @@
 			'footer_menu' => 'Footer Menu',
 			'front_page_menu' => 'Front page menu',
 		));
+		add_theme_support('html5');
 	}
 	add_action('after_setup_theme','sit_setup');
 

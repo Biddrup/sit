@@ -6,5 +6,8 @@
 			'theme_location' => 'front_page_menu',
 		));
 	?>
+	<section class="search-form">
+		<?php get_search_form(); ?>
+	</section>
 	<hr>
 <?php get_footer(); ?>
