@@ -5,9 +5,11 @@
 			if ( have_posts()) {
 				while ( have_posts()) {
 					the_post(); ?>
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<?php the_post_thumbnail('search-image-size'); ?>
-					<?php the_excerpt(); ?>
+					<div class="search-content">
+						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<?php the_post_thumbnail('search-image-size'); ?>
+						<?php the_excerpt(); ?>
+					</div>
 			<?php	}
 			}else {
 				echo "Doesn't match anything %s";
