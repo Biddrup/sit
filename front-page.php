@@ -33,6 +33,7 @@
 				}else{
 					echo "Dont have post";
 				}
+				wp_reset_postdata();
 			?>
 		</div>
 	</section>
