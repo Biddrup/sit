@@ -33,3 +33,20 @@
 		));
 	}
 	add_action('widgets_init', 'sit_widgets');
+
+	function sit_custom_posts(){
+		register_post_type('sit_product', array(
+			'labels' => array(
+				'name' => 'Sit Product',
+				'menu_name' => 'Sit Menu',
+				'all_items' => 'Sit All Products',
+				'add_new' => 'Add new product',
+				'add_new_item' => 'Add new sit product',
+			),
+			'public' => true,
+			'supports' => array(
+				'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'custom-fields', 'page-attributes',
+			),
+		));
+	}
+	add_action('init','sit_custom_posts');
