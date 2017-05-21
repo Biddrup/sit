@@ -39,9 +39,8 @@
 
 				$sit_post = null;
 				$sit_post = new WP_Query(array(
-					'post_type'=>'sit_service',
+					'post_type'=>'page',
 					'posts_per_page'=>3,
-					'category_name' => 'sit-2',
 				));
 				if ( $sit_post->have_posts()) {
 					while ( $sit_post->have_posts()) {
@@ -51,7 +50,7 @@
 						<div class="single-post">
 							<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 							<h3><?php echo $Service_test; ?></h3>
-							<?php the_content(); ?>
+							<?php the_excerpt(); ?>
 						</div>
 				<?php	}
 				}else{
