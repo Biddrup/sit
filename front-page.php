@@ -41,6 +41,7 @@
 				$sit_post = new WP_Query(array(
 					'post_type'=>'sit_service',
 					'posts_per_page'=>3,
+					'category_name' => 'sit-2',
 				));
 				if ( $sit_post->have_posts()) {
 					while ( $sit_post->have_posts()) {
