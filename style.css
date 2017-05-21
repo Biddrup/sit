@@ -17,3 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	border: 2px outset green;
 	margin-bottom: 10px;
 }
+.single-post {
+	border: 2px solid green;
+	margin-bottom: 10px;
+}

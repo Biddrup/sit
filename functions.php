@@ -50,3 +50,20 @@
 		));
 	}
 	add_action('init','sit_custom_posts');
+
+	function sit_custom_service(){
+		register_post_type('sit_service', array(
+			'labels' => array(
+				'name' => 'Sit service',
+				'menu_name' => 'Sit service',
+				'all_items' => 'Sit All service',
+				'add_new' => 'Add new service',
+				'add_new_item' => 'Add new sit service',
+			),
+			'public' => true,
+			'supports' => array(
+				'title', 'editor', 'thumbnail', 'excerpt', 'revisions', 'custom-fields', 'page-attributes',
+			),
+		));
+	}
+	add_action('init','sit_custom_service');

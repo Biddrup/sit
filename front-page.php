@@ -15,6 +15,8 @@
 	<section class="custom-post">
 		<div class="all-post">
 			<?php
+				$sit_post = null;
+
 				$sit_post = new WP_Query(array(
 					'post_type'=>'sit_product',
 					'posts_per_page'=>3,
@@ -27,6 +29,27 @@
 						<div class="single-post">
 							<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 							<h3><?php echo $email; ?></h3>
+							<?php the_content(); ?>
+						</div>
+				<?php	}
+				}else{
+					echo "Dont have post";
+				}
+				wp_reset_postdata();
+
+				$sit_post = null;
+				$sit_post = new WP_Query(array(
+					'post_type'=>'sit_service',
+					'posts_per_page'=>3,
+				));
+				if ( $sit_post->have_posts()) {
+					while ( $sit_post->have_posts()) {
+						$sit_post->the_post();
+						$Service_test = get_post_meta( get_the_ID(), 'Service', true);
+						?>
+						<div class="single-post">
+							<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+							<h3><?php echo $Service_test; ?></h3>
 							<?php the_content(); ?>
 						</div>
 				<?php	}
