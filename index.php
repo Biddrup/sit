@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+	<h2>This is index.php</h2>
 	<article class="article-area">
 		<div class="single-article">
 			<?php
