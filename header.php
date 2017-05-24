@@ -10,3 +10,7 @@
 		'theme_location' => 'header_menu',
 	)); ?>
 	<?php get_search_form(); ?>
+
+	<div class="register-log">
+		<a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a>
+	</div>
