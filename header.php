@@ -12,5 +12,11 @@
 	<?php get_search_form(); ?>
 
 	<div class="register-log">
-		<a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a>
+		<?php
+		if ( is_user_logged_in() ) { ?>
+		    <a href="<?php echo wp_logout_url( get_permalink() ); ?>">Logout</a>
+		<?php } else { ?>
+		    <a href="<?php echo wp_login_url( get_permalink() ); ?>" title="Login">Login</a>
+		<?php }
+		?>
 	</div>
